@@ -1,17 +1,32 @@
 aid: lb-pharmaceuticals
 name: LB Pharmaceuticals
-description: 'LB Pharmaceuticals is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'LB Pharmaceuticals Inc (Nasdaq: LBRX) is a clinical-stage biopharmaceutical
+  company headquartered at One Pennsylvania Plaza, New York, developing novel therapies
+  for neuropsychiatric diseases including schizophrenia and bipolar depression. Its
+  lead asset, LB-102, is an oral small-molecule benzamide antipsychotic with potent
+  D2, D3 and 5HT7 antagonism, positioned to become the first benzamide antipsychotic
+  approved for neuropsychiatric disorders in the United States. The company reported
+  positive Phase 2 schizophrenia results from its NOVA1 trial in January 2025 and
+  initiated the ILLUMINATE-1 Phase 2 bipolar depression trial in January 2026. LB
+  Pharmaceuticals is a drug developer, not a software vendor: it publishes no public
+  API, developer portal, SDK or machine-readable contract, and its web presence is
+  a WordPress corporate and investor-relations site.'
+image: https://lbpharma.us/wp-content/uploads/2026/03/LBlogo-color_final-opt.png
 url: https://raw.githubusercontent.com/api-evangelist/lb-pharmaceuticals/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Pharmaceuticals
+- Biotechnology
+- Life Sciences
+- Health
+- Clinical Trials
+- Neuroscience
+- Drug Development
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lb-pharmaceuticals-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/lb-pharmaceuticals_stock/
+  url: https://lbpharma.us/
+- type: PrivacyPolicy
+  url: https://lbpharma.us/privacy-policy/
+- type: Support
+  url: https://lbpharma.us/contact/
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    LB Pharmaceuticals is a clinical-stage drug developer whose entire web presence is
+    a WordPress marketing and investor-relations site; the only machine-readable surface
+    is the stock WordPress core REST API at lbpharma.us/wp-json/ (222 routes, every
+    namespace a CMS plugin such as contact-form-7, redirection and wp-smush), with no
+    product API, no developer or docs subdomain (api./docs./developer.lbpharma.us all
+    NXDOMAIN), no GitHub organization and no published client library.
+  evidence:
+  - url: https://lbpharma.us/wp-json/
+    status: 200
+  - url: https://lbpharma.us/openapi.json
+    status: 404
+  - url: https://lbpharma.us/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/lbpharma
+    status: 404
+  checked: '2026-08-23'

@@ -1,0 +1,34 @@
+generated: '2026-08-23'
+method: probed
+source: https://lbpharma.us/.well-known/
+note: >-
+  Every /.well-known/ path probed on the only host LB Pharmaceuticals operates
+  (lbpharma.us) returned a hard 404. A soft-404 control probe of a deliberately
+  nonsense path returned the identical 404 and byte count (1674b), confirming the
+  host is NOT a catch-all that answers 200 for arbitrary paths — these are genuine
+  absences, not masked hits. NO WellKnown or SecurityTxt pointer is emitted in
+  apis.yml because nothing was served. This file records a verified absence.
+hit_count: 0
+hosts:
+- host: https://lbpharma.us
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+soft_404_control:
+  path: /.well-known/this-path-should-not-exist-9f3c
+  status: 404
+  bytes: 1674
