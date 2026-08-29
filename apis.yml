@@ -11,6 +11,17 @@ description: 'LB Pharmaceuticals Inc (Nasdaq: LBRX) is a clinical-stage biopharm
   Pharmaceuticals is a drug developer, not a software vendor: it publishes no public
   API, developer portal, SDK or machine-readable contract, and its web presence is
   a WordPress corporate and investor-relations site.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://lbpharma.us/wp-content/uploads/2026/03/LBlogo-color_final-opt.png
 url: https://raw.githubusercontent.com/api-evangelist/lb-pharmaceuticals/refs/heads/main/apis.yml
 x-type: company
