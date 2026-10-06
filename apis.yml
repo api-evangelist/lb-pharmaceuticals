@@ -40,7 +40,7 @@ x-type: company
 x-source: harvest:secondary-market
 specificationVersion: '0.20'
 created: '2026-08-23'
-modified: '2026-08-23'
+modified: '2026-10-06'
 tags:
 - Company
 - Pharmaceuticals
@@ -57,6 +57,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://ir.lbpharma.us/investors/news/
+  type: Blog
 - type: DomainSecurity
   url: security/lb-pharmaceuticals-domain-security.yml
 - type: Website
